@@ -10,6 +10,9 @@ var usersRouter = require('./routes/users');
 //ページを追加
 var helloRouter = require('./routes/hello');
 
+//API
+var notesRouter = require('./routes/notes');
+
 var app = express();
 
 // view engine setup
@@ -25,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter);
+
+//API
+app.use('/notes', notesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
