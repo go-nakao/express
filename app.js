@@ -13,6 +13,7 @@ var helloRouter = require('./routes/hello');
 //API
 var notesRouter = require('./routes/notes');
 var catRouter = require('./routes/cat');
+var nasaRouter = require('./routes/nasa'); //第8回レポート用
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/hello', helloRouter);
 //API
 app.use('/notes', notesRouter);
 app.use('/cat', catRouter);
+app.use('/nasa', nasaRouter); //第8回レポート用
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
